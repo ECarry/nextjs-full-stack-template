@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import ZustandTest from "@/components/zustand-test";
 
 export default async function Home() {
   const session = await auth();
@@ -13,6 +14,9 @@ export default async function Home() {
         <pre className="py-6 px-4 whitespace-pre-wrap break-all">
           {JSON.stringify(session, null, 2)}
         </pre>
+      </div>
+      <div>
+        <ZustandTest />
       </div>
     </div>
   );

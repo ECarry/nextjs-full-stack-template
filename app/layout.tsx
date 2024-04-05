@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
           <div className="flex items-center justify-between w-full max-w-3xl px-4 mx-auto sm:px-6 h-full">
             {children}
           </div>
+          <ModalProvider />
         </ThemeProvider>
       </body>
     </html>
